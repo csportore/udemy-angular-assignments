@@ -1,10 +1,9 @@
 <input type="text"
         class="form-control"
-        (input)="checkIfNameIsEmpty($event)"
         [(ngModel)]="username">
 
 <p>Username = {{ username }}</p>
 
 <button class="btn btn-primary"
-        [disabled]="isNameEmpty"
-        (click)="clearUsername()">{{ buttonText }}</button>
+        [disabled]="username === ''"
+        (click)="username = ''">{{ buttonText }}</button>

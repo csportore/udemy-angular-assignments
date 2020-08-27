@@ -18,18 +18,4 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  checkIfNameIsEmpty(event: Event) {
-    if ((<HTMLInputElement> event.target).value) {
-      this.isNameEmpty = false;
-      this.buttonText = 'Yes, I am!';
-    } else {
-      this.clearUsername();
-    }
-  }
-
-  clearUsername() {
-    this.isNameEmpty = true;
-    this.username = '';
-    this.buttonText = 'Am I Clickable?';
-  }
 }
