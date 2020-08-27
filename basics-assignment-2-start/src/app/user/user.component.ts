@@ -23,8 +23,13 @@ export class UserComponent implements OnInit {
       this.isNameEmpty = false;
       this.buttonText = 'Yes, I am!';
     } else {
-      this.isNameEmpty = true;
-      this.buttonText = 'Am I Clickable?';
+      this.clearUsername();
     }
+  }
+
+  clearUsername() {
+    this.isNameEmpty = true;
+    this.username = '';
+    this.buttonText = 'Am I Clickable?';
   }
 }
