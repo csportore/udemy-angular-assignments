@@ -16,7 +16,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   isDisplayed:boolean = false;
   clickList = [];
-  defaultBGColor = 'white';
   clickID = 0;
 
   toggleDisplay() {
@@ -24,7 +23,4 @@ export class AppComponent {
     this.clickList.push(++this.clickID);
   }
 
-  paintBackground() {
-    return this.clickList.length >= 5 ? 'blue' : 'white';
-  }
 }
