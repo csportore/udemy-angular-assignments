@@ -17,8 +17,10 @@
       
       <h3>Click log</h3>
       <ol>
-        <li class="list-item"
-          *ngFor="let click of clickList">On the {{ click }} you clicked the button!
+        <li
+          [ngStyle]="{backgroundColor: this.click >= 5 ? 'blue' : 'white'}"
+          [ngClass]="{'white-letters': this.click >= 5}"
+          *ngFor="let click of clickList"> You clicked {{ click }} time(s) the button!
       </li>
       </ol>
     </div>
